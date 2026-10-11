@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Escolha a unidade e a forma de consumo do Raízes do Nordeste.">
+  <meta name="theme-color" content="#365e57">
+  <title>Escolha sua unidade | Raízes do Nordeste</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/unidades.css">
+</head>
+
+<body>
+  <header class="unidades-header">
+    <a href="index.html" class="voltar-unidades">←</a>
+    <div>
+      <h1>Raízes do Nordeste 🌵</h1>
+      <p>Escolha onde e como você quer fazer o seu pedido!</p>
+    </div>
+
+    <div class="unidades-logo">
+      🌵
+    </div>
+  </header>
+
+  <main class="unidades-container">
+    <section class="unidades-intro">
+      <span class="unidades-tag">📍 Encontre a unidade mais pertinho de você!</span>
+
+      <h2>
+        Escolha a unidade e o tipo de consumo
+      </h2>
+
+      <p>
+        O tempo, o valor do delivery e os produtos podem variar conforme a unidade escolhida.
+      </p>
+    </section>
+
+    <section class="unidades-filtros">
+
+      <div class="filtro-grupo">
+        <label for="filtroCidade">
+          Cidade
+        </label>
+
+        <select id="filtroCidade">
+          <option value="todas">
+            Todas as cidades
+          </option>
+        </select>
+      </div>
+
+      <div class="filtro-grupo">
+        <label for="filtroConsumo">
+          Forma de consumo
+        </label>
+
+        <select id="filtroConsumo">
+          <option value="retirada">
+            🛍️ Retirada
+          </option>
+
+          <option value="delivery">
+            🛵 Delivery
+          </option>
+
+          <option value="local">
+            🍽️ Consumo no local
+          </option>
+        </select>
+      </div>
+    </section>
+
+    <section>
+      <div class="titulo-unidades">
+        <div>
+          <span class="unidades-tag">
+            Nossas unidades
+          </span>
+
+          <h2>
+            Escolha onde pedir
+          </h2>
+        </div>
+
+        <span id="contadorUnidades">
+          0 unidades
+        </span>
+      </div>
+
+      <div id="listaUnidades" class="lista-unidades"></div>
+    </section>
+  </main>
+
+  <footer class="unidades-footer">
+    <p>
+      🌵 Raízes do Nordeste
+    </p>
+  </footer>
+
+  <script src="js/mockData.js"></script>
+  <script src="js/unidades.js"></script>
+
+</body>
+
+</html>

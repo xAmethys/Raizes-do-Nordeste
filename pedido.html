@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Finalizar Pedido | Raízes do Nordeste</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pedido.css">
+</head>
+
+<body>
+
+  <header class="pedido-header">
+    <a href="cardapio.html">←</a>
+    <h1>Finalizar Pedido</h1>
+  </header>
+
+  <main class="pedido-container">
+
+    <section class="tipo-entrega">
+      <h2>Forma de consumo</h2>
+      <div id="resumoTipo"></div>
+    </section>
+
+    <section id="dadosConsumo" class="dados"></section>
+
+    <section class="resumo">
+      <h3>Seus produtos</h3>
+      <div id="listaPedido"></div>
+    </section>
+
+    <section class="recompensas-pedido">
+      <div class="recompensas-titulo">
+        <div>
+          <h2>🎁 Recompensas</h2>
+          <p id="resumoFidelidade">Carregando seus pontos...</p>
+
+          <p id="pontosGanharDestePedido" style="margin-top: 6px; font-weight: 600; color: var(--primary);">
+            ⭐ Você ganhará 0 pontos com este pedido!
+          </p>
+        </div>
+      </div>
+
+      <div id="listaRecompensas"></div>
+    </section>
+
+    <section class="pagamento">
+      <h2>Forma de pagamento</h2>
+
+      <label>
+        <input type="radio" name="pagamento" value="pix">
+        PIX
+      </label>
+
+      <label>
+        <input type="radio" name="pagamento" value="cartao">
+        Cartão
+      </label>
+
+      <label>
+        <input type="radio" name="pagamento" value="dinheiro">
+        Dinheiro
+      </label>
+    </section>
+
+    <section class="integracao-pagamento">
+      <div class="integracao-conteudo">
+        <h3>Integração externa</h3>
+
+        <div class="integracao-info">
+          <div class="integracao-item">
+            <span class="integracao-bolinha"></span>
+            <span>Ambiente sem cobrança real.</span>
+          </div>
+
+          <div class="integracao-item">
+            <span class="integracao-bolinha"></span>
+            <span>Fluxo apresentado com clareza para revisão antes do envio.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="autorizacoes-pagamento">
+      <label class="checkbox-pagamento">
+        <input type="checkbox" id="autorizaEnvioPagamento">
+        <span>
+          Autorizo o envio dos dados mínimos do pedido ao parceiro de pagamento.
+        </span>
+      </label>
+
+      <label class="checkbox-pagamento">
+        <input type="checkbox" id="confirmaPrivacidadePagamento">
+        <span>
+          Confirmo que li a política de privacidade e estou ciente do fluxo externo simulado.
+        </span>
+      </label>
+    </section>
+
+    <section class="total">
+      <div>
+        <span>Total:</span>
+        <strong id="valorTotal">R$ 0,00</strong>
+      </div>
+
+      <button id="finalizarPedido" class="btn-primary">
+        Confirmar Pedido
+      </button>
+    </section>
+  </main>
+
+  <div id="pagamentoModal" class="modal-pagamento">
+    <div class="pagamento-box">
+      <h2>Processando pagamento</h2>
+      <div class="loader"></div>
+      <p id="statusPagamento">Enviando o pagamento para serviço externo...</p>
+    </div>
+  </div>
+  <script src="js/servicoPagamento.js"></script>
+  <script src="js/pedido.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio | Raízes do Nordeste</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cardapio.css">
+</head>
+
+<body>
+  <header class="card-header">
+    <a href="unidades.html" class="voltar">
+      ←
+    </a>
+    <div>
+      <h1>Cardápio</h1>
+      <p>Escolha seu prato preferido</p>
+    </div>
+    <button class="perfil-btn">
+      👤
+    </button>
+  </header>
+
+  <main class="cardapio-container">
+    <section class="busca">
+      <input type="text" id="pesquisa" placeholder="🔍 Procurar comida...">
+    </section>
+
+    <section class="categorias-menu">
+      <div id="listaCategorias"></div>
+    </section>
+
+    <section class="destaques">
+      <h2>Destaques da casa</h2>
+      <div id="produtosDestaque"></div>
+    </section>
+
+    <section class="produtos">
+      <h2>Nosso Cardápio</h2>
+      <div id="listaProdutos"></div>
+    </section>
+  </main>
+
+  <button id="abrirCarrinho" class="carrinho-flutuante">
+    🛒
+    <span id="quantidadeCarrinho">0</span>
+  </button>
+
+  <div id="modalProduto" class="modal">
+    <div class="modal-content">
+      <button id="fecharModal" class="fechar">×</button>
+      <img id="imagemProduto" src="" alt="Produto">
+      <h2 id="nomeProduto"></h2>
+      <p id="descricaoProduto"></p>
+
+      <h3>Extras</h3>
+      <div id="listaExtras"></div>
+
+      <div class="quantidade">
+        <button id="diminuir">-</button>
+        <span id="quantidadeProduto">1</span>
+        <button id="aumentar">+</button>
+      </div>
+
+      <button id="adicionarProduto" class="btn-primary">
+        Adicionar ao carrinho
+      </button>
+    </div>
+  </div>
+  <script src="js/mockData.js"></script>
+  <script src="js/cardapio.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raízes do Nordeste</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="logo-link">
+            <div class="logo">
+                🌵 <span>Raízes do Nordeste</span>
+            </div>
+        </a>
+
+        <div class="usuario-area">
+            <div id="usuarioDeslogado" class="usuario-deslogado">
+                <a href="login.html" class="btn-login">Entrar</a>
+                <a href="cadastro.html" class="btn-cadastro">Criar conta</a>
+            </div>
+
+            <div id="usuarioLogado" class="usuario-logado" style="display: none;">
+                <button id="btnConta" class="conta-btn">
+                    <div class="avatar">👤</div>
+
+                    <div class="dados">
+                        <small>Olá,</small>
+                        <strong id="nomeUsuario">Cliente</strong>
+                    </div>
+                    <span>▼</span>
+                </button>
+
+                <div id="menuConta" class="menu-conta">
+                    <a href="perfil.html">Meu Perfil</a>
+                    <a href="#" id="sairConta">Sair</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content"></div>
+        </section>
+
+        <section class="promocoes">
+            <div class="section-title">
+                <h2>Destaques do Dia</h2>
+                <p>Comidas preparadas especialmente para você.</p>
+            </div>
+
+            <div class="cards">
+                <article class="promo-card">
+                    <span class="badge">Novo</span>
+                    <img src="assets/comidas/cuscuz.jpg" alt="Cuscuz Nordestino">
+                    <h3>Cuscuz nordestino</h3>
+                    <p>Queijo coalho com carne de sol e manteiga de garrafa</p>
+                    <strong>R$ 24,90</strong>
+                </article>
+
+                <article class="promo-card">
+                    <span class="badge">Novo</span>
+                    <img src="assets/comidas/tapioca.jpg" alt="Tapioca Especial">
+                    <h3>Tapioca de frango </h3>
+                    <p>Frango cremoso com queijo coalho</p>
+                    <strong>R$ 22,90</strong>
+                </article>
+            </div>
+        </section>
+
+        <section class="campanhas-home" id="campanhas-section">
+            <div class="campanhas-home-titulo">
+                <h2>Campanhas</h2>
+            </div>
+
+            <div class="campanhas-home-grid" id="campanhas-home-lista"></div>
+        </section>
+
+        <section class="escolha-pedido">
+            <div class="escolha-pedido-conteudo">
+                <span class="tag">🌵 O seu pedido, do seu jeitinho</span>
+                <h2>Escolha onde e como deseja fazer o seu pedido</h2>
+                <div class="etapas-pedido">
+                    <div class="etapa-pedido">
+                        <span>1</span>
+                        <div>
+                            <strong>Escolha a unidade</strong>
+                            <small>Encontre a unidade mais pertinho de você.</small>
+                        </div>
+                    </div>
+
+                    <div class="etapa-pedido">
+                        <span>2</span>
+                        <div>
+                            <strong>Escolha a forma de consumo</strong>
+                            <small>De delivery, retirada ou consumo no lugar. Você é quem decide!</small>
+                        </div>
+                    </div>
+                </div>
+                <a href="unidades.html" class="btn-primary">Escolher unidade</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h3>🌵 Raízes do Nordeste</h3>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

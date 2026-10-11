@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acompanhar Pedido | Raízes do Nordeste</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/acompanhamento.css">
+</head>
+
+<body>
+  <header class="acom-header">
+    <a href="index.html">←</a>
+    <div>
+      <h1>Acompanhar Pedido</h1>
+      <p id="numeroPedido">Pedido #000000</p>
+    </div>
+  </header>
+
+  <main class="acom-container">
+    <section class="status-card">
+      <div class="status-icon">📦</div>
+
+      <div>
+        <h2 id="statusAtual">Recebido</h2>
+        <p id="tempoEstimado">Tempo estimado: 25 minutos</p>
+      </div>
+    </section>
+
+    <section class="timeline">
+      <h2>Status do Pedido</h2>
+      <div class="linha-tempo">
+        <div class="etapa ativa" id="etapa1">
+          <div class="circulo"></div>
+          <span>Recebido</span>
+        </div>
+
+        <div class="etapa" id="etapa2">
+          <div class="circulo"></div>
+          <span>Em preparo</span>
+        </div>
+
+        <div class="etapa" id="etapa3">
+          <div class="circulo"></div>
+          <span>Pronto</span>
+        </div>
+
+        <div class="etapa" id="etapa4">
+          <div class="circulo"></div>
+          <span>Finalizado</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="resumo-pedido">
+      <h2>Resumo do Pedido</h2>
+      <div id="listaItens"></div>
+    </section>
+
+    <section class="informacoes">
+      <h2>Informações</h2>
+      <div class="info-item">
+        <span>Forma de consumo</span>
+        <strong id="tipoConsumo"></strong>
+      </div>
+
+      <div class="info-item">
+        <span>Pagamento</span>
+        <strong id="formaPagamento"></strong>
+      </div>
+
+      <div class="info-item">
+        <span>Total</span>
+        <strong id="valorPedido"></strong>
+      </div>
+    </section>
+
+    <section class="avaliacao" id="avaliacao" style="display:none;">
+      <h2>Como foi a sua experiência?</h2>
+      <div class="estrelas">
+        <button data-nota="1">⭐</button>
+        <button data-nota="2">⭐</button>
+        <button data-nota="3">⭐</button>
+        <button data-nota="4">⭐</button>
+        <button data-nota="5">⭐</button>
+      </div>
+
+      <textarea id="comentario" placeholder="Conte para a gente como foi o seu atendimento..."></textarea>
+
+      <button id="enviarAvaliacao" class="btn-primary">
+        Enviar
+      </button>
+    </section>
+  </main>
+
+  <script src="js/acompanhamento.js"></script>
+
+</body>
+
+</html>

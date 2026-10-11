@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrar | Raízes do Nordeste</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+  <header class="header">
+    <a href="index.html" class="logo-link">
+      <div class="logo">
+        🌵 <span>Raízes do Nordeste</span>
+      </div>
+    </a>
+
+    <div class="usuario-area">
+      <div class="usuario-deslogado">
+        <a href="cadastro.html" class="btn-cadastro">Criar conta</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="login-container">
+    <div class="login-banner">
+      <img src="assets/logo.jpg" alt="Raízes do Nordeste">
+      <h1>Bem-vindo!</h1>
+      <p>Entre para acompanhar seus pedidos, acumular pontos e aproveitar descontos exclusivos.</p>
+    </div>
+
+    <div class="login-card">
+      <h2>Entrar</h2>
+      <form id="formLogin">
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="seuemail@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" placeholder="********" required>
+        </div>
+
+        <div class="login-opcoes">
+          <label class="lembrar">
+            <input type="checkbox" id="lembrar">
+            Lembrar-me
+          </label>
+          <a href="#">Esqueci minha senha</a>
+        </div>
+
+        <button type="submit" class="btn-primary">
+          Entrar
+        </button>
+      </form>
+
+      <div class="login-divisor">
+        <span>ou</span>
+      </div>
+
+      <button class="btn-google">
+        <img src="assets/icons/google.svg" alt="Google">
+        Continuar com Google
+      </button>
+
+      <p class="cadastro-link">
+        Ainda não possui uma conta?
+        <a href="cadastro.html">Criar conta</a>
+      </p>
+    </div>
+  </div>
+  <script src="js/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Perfil | Raízes do Nordeste</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/perfil.css">
+</head>
+
+<body>
+  <header class="perfil-header">
+    <a href="index.html" class="voltar">←</a>
+    <h1>Meu Perfil</h1>
+    <button id="logoutBtn" class="btn-sair">
+      Sair
+    </button>
+  </header>
+
+  <main class="perfil-container">
+    <section class="perfil-topo">
+      <div class="avatar-container">
+        <div class="avatar" id="avatarUsuario">
+          👤
+        </div>
+
+        <button id="trocarFoto" class="btn-secundario">
+          Alterar foto
+        </button>
+      </div>
+
+      <div class="usuario-info">
+        <h2 id="perfilNome">
+          Usuário
+        </h2>
+
+        <p id="perfilEmail">
+          email@email.com
+        </p>
+
+        <span class="nivel-fidelidade" id="nivelFidelidade">
+          🌱 Cliente Raiz
+        </span>
+      </div>
+    </section>
+
+    <section class="card-perfil">
+      <div class="titulo-card">
+        <h2>Dados Pessoais</h2>
+
+        <button id="editarPerfil" class="btn-secundario">
+          Editar
+        </button>
+      </div>
+
+      <form id="formPerfil">
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" disabled>
+        </div>
+
+        <div class="form-group">
+          <label for="cpf">CPF</label>
+          <input type="text" id="cpf" disabled>
+        </div>
+
+        <div class="form-group">
+          <label for="nascimento">Data de nascimento</label>
+          <input type="date" id="nascimento" disabled>
+        </div>
+
+        <div class="form-group">
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" disabled>
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" disabled>
+        </div>
+
+        <button type="submit" id="salvarPerfil" class="btn-primary" style="display: none;">
+          Salvar Alterações
+        </button>
+      </form>
+    </section>
+
+    <section class="card-perfil">
+      <div class="titulo-card">
+        <h2>Programa de Fidelidade</h2>
+      </div>
+
+      <div class="fidelidade">
+        <div class="pontos">
+          <strong id="totalPontos">
+            0
+          </strong>
+
+          <span>
+            Pontos
+          </span>
+        </div>
+
+        <div class="niveis-fidelidade">
+          <h3>✨ Níveis de fidelidade</h3>
+
+          <div class="niveis-grid">
+
+            <div class="nivel-card nivel-atual">
+              <div class="nivel-icone">🌱</div>
+              <div class="nivel-info">
+                <strong>Cliente Raiz</strong>
+                <span>0 a 499 pontos</span>
+                <small>Recompensas básicas</small>
+              </div>
+            </div>
+
+            <div class="nivel-card">
+              <div class="nivel-icone">🌵</div>
+              <div class="nivel-info">
+                <strong>Cliente Cacto</strong>
+                <span>500 a 999 pontos</span>
+                <small>Recompensas melhores</small>
+              </div>
+            </div>
+
+            <div class="nivel-card">
+              <div class="nivel-icone">🔥</div>
+              <div class="nivel-info">
+                <strong>Cliente Sertão</strong>
+                <span>1.000 a 1.999 pontos</span>
+                <small>Benefícios exclusivos</small>
+              </div>
+            </div>
+
+            <div class="nivel-card">
+              <div class="nivel-icone">👑</div>
+              <div class="nivel-info">
+                <strong>Cliente Mestre do Nordeste</strong>
+                <span>2.000+ pontos</span>
+                <small>Recompensas especiais</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nivel-detalhes">
+          <strong id="nomeNivelCompleto">
+            🌱 Cliente Raiz
+          </strong>
+
+          <span id="beneficioNivel">
+            Recompensas básicas
+          </span>
+        </div>
+
+        <div class="barra">
+          <div class="progresso" id="barraPontos"></div>
+        </div>
+
+        <p id="textoNivel">
+          Faltam 500 pontos para subir de nível.
+        </p>
+
+        <div class="recompensas-perfil">
+          <h3>🎁 Suas recompensas</h3>
+          <div id="listaRecompensasPerfil"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card-perfil">
+      <div class="titulo-card">
+        <h2>Histórico de Pedidos</h2>
+      </div>
+
+      <div id="historicoPedidos"></div>
+    </section>
+
+    <section class="card-perfil">
+      <div class="titulo-card">
+        <h2>Privacidade (LGPD)</h2>
+      </div>
+
+      <div class="privacidade">
+        <label>
+          <input type="checkbox" id="receberPromocoes">
+          Receber promoções e ofertas via e-mail
+        </label>
+
+        <label>
+          <input type="checkbox" id="receberNotificacoes">
+          Receber notificações via e-mail
+        </label>
+
+        <div class="lgpd-info">
+          <strong>
+            Consentimento LGPD
+          </strong>
+
+          <p id="dataLGPD">
+            --
+          </p>
+        </div>
+
+        <button id="exportarDados" class="btn-secundario">
+          Exportar meus dados
+        </button>
+
+        <button type="button" id="btnExcluirDados" class="btn-danger">
+          Excluir minha conta e dados
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/perfil.js"></script>
+</body>
+
+</html>
