@@ -89,4 +89,4 @@ Senha: admin123
 ```
 
 ## Observação importante
-Nesse projeto é usado `localStorage` e dados mockados para representar os fluxos do projeto.
+Nesse projeto é usado `localStorage`, `IndexedDB` e dados mockados para representar os fluxos do projeto.
